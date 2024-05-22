@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <title>videojs-logo Demo</title>
-  <link href="node_modules/video.js/dist/video-js.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/video.js@8.12.0/dist/video-js.min.css" rel="stylesheet">
   <link href="dist/videojs-logo.css" rel="stylesheet">
   <style>
     body {
@@ -18,22 +18,23 @@
 </head>
 <body>
   <h1>videojs-logo demo</h1>
-  <video id="videojs-logo-player" class="video-js vjs-default-skin" autoplay controls>
+  <video-js id="videojs-logo-player" class="vjs-default-skin vjs-fluid vjs-16-9" autoplay controls>
     <source src="//vjs.zencdn.net/v/oceans.mp4" type='video/mp4'>
     <source src="//vjs.zencdn.net/v/oceans.webm" type='video/webm'>
-  </video>
+  </video-js>
   <ul>
     <li><a href="docs/api/">Read generated docs.</a></li>
   </ul>
-  <script src="node_modules/video.js/dist/video.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/video.js@8.12.0/dist/video.min.js"></script>
   <script src="dist/videojs-logo.js"></script>
   <script>
     (function(window, videojs) {
       var examplePlayer = window.examplePlayer = videojs('videojs-logo-player');
       var logo = window.logo = examplePlayer.logo({
         image: 'img/videojs-logo-transparent.png',
+        position: "bottom-right", 
         url: 'https://github.com/tapioca24/videojs-logo',
-        width: 200,
+        width: 80,
         fadeDelay: null
       });
     }(window, window.videojs));

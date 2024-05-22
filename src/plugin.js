@@ -53,6 +53,7 @@ class Logo extends Plugin {
    */
   _onPlayerReady() {
     this.player.addClass('vjs-logo');
+    this.player.addClass('vjs-logo-bottom');
     if (!this.options.image) {
       return;
     }
@@ -93,10 +94,12 @@ class Logo extends Plugin {
     case 'bottom-left':
       div.style.bottom = offsetV + 'px';
       div.style.left = offsetH + 'px';
+      div.classList.add('vjs-logo-bottom');
       break;
     case 'bottom-right':
       div.style.bottom = offsetV + 'px';
       div.style.right = offsetH + 'px';
+      div.classList.add('vjs-logo-bottom');
       break;
     default:
       div.style.top = offsetV + 'px';
